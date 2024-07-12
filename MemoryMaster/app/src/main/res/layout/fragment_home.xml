@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.HomeFragment">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/homeContainer"
+        android:name="edu.ws2024.taskmaster.ui.SiteFragment"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/home_tab"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        app:tabIndicatorFullWidth="true"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabItem
+            android:icon="@drawable/baseline_web_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Site" />
+
+        <com.google.android.material.tabs.TabItem
+            android:icon="@drawable/outline_image_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Picture" />
+
+        <com.google.android.material.tabs.TabItem
+            android:icon="@drawable/baseline_settings_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings" />
+    </com.google.android.material.tabs.TabLayout>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/back"
+    tools:context=".ui.SiteDetailFragment">
+
+    <ImageView
+        android:layout_marginTop="35dp"
+        android:id="@+id/back_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/baseline_arrow_back_ios_24" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Site Detail"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/site_name"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie"/>
+
+    <TextView
+        android:layout_gravity="end"
+        android:id="@+id/site_type"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie"/>
+    <TextView
+        android:text="Description"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/site_description"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="Site Url"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textIsSelectable="true"
+        android:id="@+id/site_url"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="copy this url and paste in your web engine"
+        android:textSize="12sp"
+        android:textColor="@color/text_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".ui.PictureFragment">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Picture Library"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+    <FrameLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/no_picture_text"
+            android:textSize="30sp"
+            android:text="No Picture"
+            android:background="@color/back"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="end|bottom"
+        android:backgroundTint="@color/light_blue"
+        android:src="@drawable/baseline_add_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout>

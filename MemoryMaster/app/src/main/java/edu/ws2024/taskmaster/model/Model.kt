@@ -29,3 +29,7 @@ var pictureData = mutableListOf<PicData>()
 
 var originSiteData = mutableListOf<Site>()
 
+enum class DeleteType{
+    Site,Picture
+}
+

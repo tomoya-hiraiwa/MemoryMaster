@@ -4,11 +4,14 @@
     android:layout_width="match_parent"
     app:cardUseCompatPadding="true"
     app:cardCornerRadius="20dp"
+    app:cardBackgroundColor="@color/black"
     android:layout_height="wrap_content">
 
     <ImageView
+        android:layout_gravity="center"
         android:adjustViewBounds="true"
         android:id="@+id/image"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/baseline_web_24" />

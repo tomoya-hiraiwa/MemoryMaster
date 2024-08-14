@@ -56,13 +56,28 @@
         android:textSize="16sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    <TextView
-        android:textIsSelectable="true"
-        android:id="@+id/site_url"
-        android:textSize="16sp"
+    <LinearLayout
+        android:gravity="center_vertical"
         android:layout_marginTop="4dp"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
+        <TextView
+            android:ellipsize="end"
+            android:textIsSelectable="true"
+            android:id="@+id/site_url"
+            android:maxLines="1"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/copy_button"
+            android:src="@drawable/baseline_content_copy_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
     <TextView
         android:text="copy this url and paste in your web engine"
         android:textSize="12sp"

@@ -51,6 +51,7 @@
             <ImageView
                 android:layout_gravity="center"
                 android:id="@+id/yes_fav"
+                android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/baseline_star_24" />

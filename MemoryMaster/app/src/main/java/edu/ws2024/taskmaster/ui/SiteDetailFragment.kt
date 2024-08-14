@@ -1,5 +1,8 @@
 package edu.ws2024.taskmaster.ui
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -34,6 +37,10 @@ class SiteDetailFragment : Fragment() {
             b.root.setOnClickListener{}
             backIcon.setOnClickListener {
                 removeFragment(this@SiteDetailFragment)
+            }
+            copyButton.setOnClickListener {
+                val clip = requireActivity().getSystemService(Context.CLIPBOARD_SERVICE)as ClipboardManager
+                clip.setPrimaryClip(ClipData.newPlainText("url", siteDetailData.url))
             }
         }
     }

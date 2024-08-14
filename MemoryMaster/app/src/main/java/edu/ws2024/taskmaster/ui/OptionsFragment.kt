@@ -4,14 +4,13 @@ import android.app.Activity
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import edu.ws2024.taskmaster.R
 import edu.ws2024.taskmaster.database.photoFile
 import edu.ws2024.taskmaster.database.siteFile
 import edu.ws2024.taskmaster.databinding.DeleteDialogBinding

@@ -43,6 +43,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:drawableTint="@color/blue"
+        android:id="@+id/save_user_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save username" />
+
     <Button
         android:id="@+id/login_button"
         android:layout_marginTop="100dp"

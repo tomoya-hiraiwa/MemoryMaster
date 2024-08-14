@@ -1,5 +1,7 @@
 package edu.ws2024.taskmaster.ui
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,6 +19,7 @@ import edu.ws2024.taskmaster.replaceFragment
 import edu.ws2024.taskmaster.viewmodel.AccountViewModel
 
 class LoginFragment : Fragment() {
+    private lateinit var pref: SharedPreferences
     private lateinit var db: AccountHelper
     private lateinit var b: FragmentLoginBinding
     private lateinit var v: AccountViewModel
@@ -36,10 +39,18 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //init sharedPreferences
+        pref = requireContext().getSharedPreferences("pref",Context.MODE_PRIVATE)
+        val userName = pref.getString("name","")
+        val isCheck = pref.getBoolean("isSaveUser",false)
         //init db and viewModel
         db = AccountHelper((requireContext()))
         v = ViewModelProvider(requireActivity())[AccountViewModel::class.java]
         b.apply {
+            //set name when user saved username
+            nameEdit.setText(userName)
+            //set check when user saved username
+            saveUserCheck.isChecked = isCheck
             setInputBoxListener()
             //tap create account button
             createAccountButton.setOnClickListener {
@@ -68,6 +79,20 @@ class LoginFragment : Fragment() {
                         }
                         else{
                             accountName = it.name
+                            if (saveUserCheck.isChecked){
+                                pref.edit().apply{
+                                    putString("name",it.name)
+                                    putBoolean("isSaveUser",true)
+                                    commit()
+                                }
+                            }
+                            else {
+                                pref.edit().apply {
+                                    putString("name","")
+                                    putBoolean("isSaveUser",false)
+                                    commit()
+                                }
+                            }
                             replaceFragment(this@LoginFragment, HomeFragment())
                         }
                     }
